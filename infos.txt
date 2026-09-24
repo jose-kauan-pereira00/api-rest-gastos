@@ -1,0 +1,15 @@
+Planejamento:
+
+1. Criar a estrutura do projeto
+2. Planejar o Sitema
+    2.1 Controle de Usuários(*CRUD*)
+        2.1.1 Criar a autenticação com *JWT*
+    2.2 Criar centros de custo(CRUD)
+        2.2.1 Todo centro de custo deve estar vinculado a um Usuário
+    2.3 Criar os tutulos, A PAGAR e A RECEBER
+        2.3.1 Todos títulos deve está vinculado a um Usúario
+        3.3.2 Todos títulos devem estar vinculado 1 ou n centro de custos
+    2.4 Criar um *endpoint* de fluxo de caixa
+        2.4.1 Obter o total a pagar, receber, saldo, lista de titulos podendo filtrar
+
+
