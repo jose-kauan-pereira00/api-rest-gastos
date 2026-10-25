@@ -1,6 +1,8 @@
 package com.api.gastos.meusgastos.domain.service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,13 +27,26 @@ public class UsusarioService implements  ICRUDService<UsuarioRequestDTO, Usuario
 
         List<Usuario> usuarios = usuarioRepository.findAll();
 
-        
+        List<UsuarioResponseDTO> usuarioResponseDTOs = new ArrayList<>();
+
+        for (Usuario usu : usuarios) {
+            UsuarioResponseDTO dto = mapper.map(usu, UsuarioResponseDTO.class);
+            usuarioResponseDTOs.add(dto);
+
+        }
+
+        return usuarioResponseDTOs;
     }
 
     @Override
     public UsuarioResponseDTO obterPorId(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'obterPorId'");
+        Optional<Usuario> usuario = usuarioRepository.findById(id);
+
+        if(usuario.isEmpty()){
+             
+        }
+
+        return mapper.map(usuario.get(), UsuarioResponseDTO.class);
     }
 
     @Override
