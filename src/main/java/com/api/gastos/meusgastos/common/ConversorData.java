@@ -8,7 +8,6 @@ public class ConversorData {
     public static  String converterDate(Date data){
 
         SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/YYYY HH:mm");
-
         return formatador.format(data);
     }
 }
