@@ -9,6 +9,6 @@ public class ConversorData {
 
         SimpleDateFormat formatador = new SimpleDateFormat("dd/MM/YYYY HH:mm");
 
-        
+        return formatador.format(data);
     }
 }
