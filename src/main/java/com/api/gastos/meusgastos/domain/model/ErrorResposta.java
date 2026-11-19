@@ -8,12 +8,13 @@ public class ErrorResposta {
 
     
     public ErrorResposta(String dataHora, Integer status, String titulo, String menssagem) {
+        
         this.dataHora = dataHora;
         this.status = status;
         this.titulo = titulo;
         this.menssagem = menssagem;
     }
-    
+
     public String getDataHora() {
         return dataHora;
     }
